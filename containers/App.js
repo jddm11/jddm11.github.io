@@ -21,8 +21,8 @@ class App extends Component {
 				        <Grid.Column stretched width={12}>
 									<Segment>
 										<Container fluid>
-						          <Header as='h2'>Home</Header>
-						          <p>Home Section</p>
+						          <Header as='h2'>Welcome</Header>
+						          <p>In this website you will find information about my journey.</p>
 						        </Container>
 					        </Segment>
 				        </Grid.Column>
