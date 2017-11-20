@@ -6,8 +6,8 @@ export default class Home extends React.Component {
    return (
      <div>
        <Container fluid>
-         <Header as='h2'>Home</Header>
-         <p>Home Section</p>
+         <Header as='h2'>Welcome</Header>
+         <p>In this website you will find information about my journey.</p>
        </Container>
      </div>
    )
