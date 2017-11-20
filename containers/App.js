@@ -37,7 +37,7 @@ class App extends Component {
 									<Segment>
 						          <Header as='h3'>Welcome</Header>
                       <Segment basic textAlign='center'>
-                      <Image as = 'Dimmer'
+                      <Image
                         bordered={true} centered={true}
                         onMouseEnter={this.handleShow}
                         onMouseLeave={this.handleHide}

@@ -30,7 +30,7 @@ const webpackConfig = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify(env),
+        NODE_ENV: JSON.stringify('production'),
       },
     }),
   ],
@@ -48,7 +48,6 @@ const webpackConfig = {
 if (env === 'production') {
   webpackConfig.plugins.push(
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.optimize.AggressiveMergingPlugin(),//Merge chunks
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         unused: true,
