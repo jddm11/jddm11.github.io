@@ -48,6 +48,7 @@ const webpackConfig = {
 if (env === 'production') {
   webpackConfig.plugins.push(
     new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.optimize.AggressiveMergingPlugin(),//Merge chunks
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         unused: true,

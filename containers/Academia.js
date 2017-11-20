@@ -1,5 +1,5 @@
 import React from 'react';
-import { Segment, Grid, Container, Header} from 'semantic-ui-react'
+import { Segment, Grid, Container, Header, Card, Icon, Label} from 'semantic-ui-react'
 import {Link} from 'react-router-dom';
 import HeaderSection from './Header';
 import FooterSection from './Footer';
@@ -8,6 +8,13 @@ import './App.css';
 
 export default class Academia extends React.Component {
  render () {
+   const description = [
+     '<p>Juan Diego Díaz</p>',
+     '<p>Pablo Sanabria</p>',
+     '<p>Andres Neyem</p>',
+     '<p>Denis Parra</p>',
+     '<p>Jaime Navon</p>'
+   ].join(' ')
    return (
      <div className='full-height'>
        <HeaderSection />
@@ -20,7 +27,47 @@ export default class Academia extends React.Component {
              <Segment>
                <Container fluid>
                  <Header as='h2'>Academia</Header>
-                 <p>Academia Section</p>
+                <Card.Group>
+                  <Card>
+                    <Card.Content header='Enriching capstone project-based learning experiences using a crowdsourcing recommender engine' />
+                    <Card.Description>
+                    <Label circular>Juan Diego Díaz</Label>
+                    <Label circular>Pablo Sanabria</Label>
+                    <Label circular>Andres Neyem</Label>
+                    <Label circular>Denis Parra</Label>
+                    <Label circular>Jaime Navon</Label>
+                    </Card.Description>
+                    <Card.Content extra>
+                      <Icon name='info circle' />
+                      ICSE 2017
+                    </Card.Content>
+                  </Card>
+                  <Card>
+                   <Card.Content header='Understanding Student Interactions in Capstone Courses to Improve Learning Experiences' />
+                   <Card.Description>
+                   <Label circular>Juan Diego Díaz</Label>
+                   <Label circular>Andres Neyem</Label>
+                   <Label circular>Jorge Muñoz</Label>
+                   <Label circular>Jaime Navon</Label>
+                   </Card.Description>
+                   <Card.Content extra>
+                     <Icon name='info circle' />
+                     SIGCSE 2017
+                   </Card.Content>
+                 </Card>
+                 <Card>
+                  <Card.Content header='Enhancing Project Management Skills in Software Engineering Capstone Courses' />
+                  <Card.Description>
+                  <Label circular>Juan Diego Díaz</Label>
+                  <Label circular>Andres Neyem</Label>
+                  <Label circular>Jose Ignacio Benedetto</Label>
+                  </Card.Description>
+                  <Card.Content extra>
+                    <Icon name='info circle' />
+                    Mobile Information System, HINDAWI 2017 - <Label color='blue'>On review</Label>
+                  </Card.Content>
+                </Card>
+               </Card.Group>
                </Container>
              </Segment>
            </Grid.Column>
