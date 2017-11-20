@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import { Container, Header, Grid, Segment , Flag, Image, Dimmer} from 'semantic-ui-react'
+import { Container, Header, Grid, Segment , Flag, Image} from 'semantic-ui-react'
 import HeaderSection from './Header';
 import FooterSection from './Footer';
 import SideMenuSection from './SideMenu';
