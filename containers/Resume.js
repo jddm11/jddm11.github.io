@@ -1,5 +1,5 @@
 import React from 'react';
-import { Segment, Grid, Container, Header} from 'semantic-ui-react'
+import { Segment, Grid, Container, Header, Message, Icon} from 'semantic-ui-react'
 import {Link} from 'react-router-dom';
 import HeaderSection from './Header';
 import FooterSection from './Footer';
@@ -11,7 +11,7 @@ export default class Resume extends React.Component {
    return (
      <div className='full-height'>
        <HeaderSection />
-       <Segment basic className='content-height'>
+       <Segment basic>
          <Grid>
            <Grid.Column width={4}>
              <SideMenuSection active='resume'/>
@@ -20,7 +20,12 @@ export default class Resume extends React.Component {
              <Segment>
                <Container fluid>
                  <Header as='h2'>Resume</Header>
-                 <p>Resume Section</p>
+                 <Message icon warning>
+                  <Icon name='circle notched' loading />
+                  <Message.Content>
+                  Under development
+                  </Message.Content>
+                </Message>
                </Container>
              </Segment>
            </Grid.Column>

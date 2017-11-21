@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 export default class HeaderSection extends React.Component {
  render () {
    return (
-     <Header as='h3' block className='header-height'>
+     <Header as='h3' block color='blue' className='header-height'>
        <Image circular src='../images/myAvatar.png' />
        <Header.Content>
          Juan Diego Díaz Mosquera

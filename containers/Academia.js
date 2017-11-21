@@ -18,7 +18,7 @@ export default class Academia extends React.Component {
    return (
      <div className='full-height'>
        <HeaderSection />
-       <Segment basic className='content-height'>
+       <Segment basic>
          <Grid>
            <Grid.Column width={4}>
              <SideMenuSection active='academia'/>
@@ -29,7 +29,7 @@ export default class Academia extends React.Component {
                  <Header as='h2'>Academia</Header>
                 <Card.Group>
                   <Card>
-                    <Card.Content header='Enriching capstone project-based learning experiences using a crowdsourcing recommender engine' />
+                    <Card.Content header='Enriching Capstone Project-based Learning Experiences Using a Crowdsourcing Recommender Engine' />
                     <Card.Description>
                     <Label circular>Juan Diego Díaz</Label>
                     <Label circular>Pablo Sanabria</Label>
