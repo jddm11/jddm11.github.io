@@ -3,26 +3,40 @@
 }
 
 .header-height{
-  height: 10% !important;
   min-height: 70px;
+  position: fixed;
+  width: 100%;
+  top:0px;
+  z-index: 9999 !important;
   /*font-family: 'Raleway' !important, sans-serif;*/
 }
 
-.footer-height{
-  height: 10% !important;
-  min-height: 100px;
+.inverted-border{
+  border-bottom: 2px solid #b5cc18!important;
 }
 
-.overlay-footer{
-  z-index: 1001;
+.menu-header-over{
+  z-index: 9999 !important;
 }
 
-.content-height{
-  height: 80% !important;
-  min-height: 500px !important;
+.main{
   position: relative;
+  top:50px;
+  /*min-height: 480px !important;*/
 }
+
+.footer-height{
+/*Not implemented*/
+}
+
+/*.overlay-footer{
+  z-index: 1001;
+}*/
 
 #app{
   height: 100% !important;
+}
+
+body{
+  height: auto !important;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Segment, Grid, Container, Header, Item, Label} from 'semantic-ui-react'
+import { Segment, Grid, Container, Header, Item, Label, Sticky} from 'semantic-ui-react'
 import {Link} from 'react-router-dom';
 import HeaderSection from './Header';
 import FooterSection from './Footer';
@@ -7,16 +7,28 @@ import SideMenuSection from './SideMenu';
 import './App.css';
 
 export default class Industry extends React.Component {
- render () {
+  state = {}
+  handleContextRef = contextRef => this.setState({ contextRef })
+
+   render () {
+   const { contextRef } = this.state
    return (
      <div className='full-height'>
        <HeaderSection />
-       <Segment basic>
-         <Grid>
-           <Grid.Column width={4}>
-             <SideMenuSection active='industry'/>
+       <Segment basic className='main' ref={this.handleContextRef}>
+       <Grid>
+         <Grid.Row only='tablet mobile' style={{ marginTop: '100px'}}>
+           <Grid.Column width={16}>
+           <SideMenuSection active='industry'/>
            </Grid.Column>
-           <Grid.Column stretched width={12}>
+         </Grid.Row>
+         <Grid.Row>
+           <Grid.Column width={4} only='large screen'>
+             <Sticky context={contextRef} offset={75}>
+               <SideMenuSection active='industry'/>
+             </Sticky>
+           </Grid.Column>
+           <Grid.Column stretched tablet={16} mobile={16} largeScreen={12} widescreen={12}>
              <Segment>
                <Container fluid>
                  <Header as='h2'>Industry</Header>
@@ -85,12 +97,17 @@ export default class Industry extends React.Component {
                   </Item>
                   </Item.Group>
                </Container>
-             </Segment>
-           </Grid.Column>
-         </Grid>
-       </Segment>
-       <FooterSection/>
-     </div>
+               </Segment>
+              </Grid.Column>
+             </Grid.Row>
+             <Grid.Row>
+               <Grid.Column>
+                 <FooterSection/>
+               </Grid.Column>
+             </Grid.Row>
+           </Grid>
+         </Segment>
+       </div>
    )
  }
 }

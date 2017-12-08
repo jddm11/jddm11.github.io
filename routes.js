@@ -9,7 +9,7 @@ import Resume from './containers/Resume';
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-52099006-2');
 
-const logPageView = () => {    ReactGA.set({ page: window.location.pathname });
+const logPageView = () => { ReactGA.set({ page: window.location.pathname });
     ReactGA.pageview(window.location.pathname);
     return null;
 };

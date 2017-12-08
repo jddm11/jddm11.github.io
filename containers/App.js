@@ -1,39 +1,45 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import { Container, Header, Grid, Segment , Flag, Image} from 'semantic-ui-react'
+import { Container, Header, Grid, Segment , Flag, Image, Menu, Dropdown, Divider, Icon, Rail, Sticky} from 'semantic-ui-react'
 import HeaderSection from './Header';
 import FooterSection from './Footer';
 import SideMenuSection from './SideMenu';
 import {Link} from 'react-router-dom';
 import './App.css';
 
-
-
 class App extends Component {
 
   state = {}
 
+  handleContextRef = contextRef => this.setState({ contextRef })
   handleShow = () => this.setState({ active: true })
   handleHide = () => this.setState({ active: false })
 
     render () {
 
-      const { active } = this.state
+      const { active, contextRef } = this.state
       const content = (
         <div>
           <Header as='h2' inverted>Sydney, Australia <Flag name='australia' /></Header>
         </div>
       )
-
         return (
 					<div className='full-height'>
 	          <HeaderSection />
-						<Segment basic>
-							<Grid>
-				        <Grid.Column width={4}>
-									<SideMenuSection active='home'/>
+						<Segment basic className='main' ref={this.handleContextRef}>
+            <Grid>
+              <Grid.Row only='tablet mobile' style={{ marginTop: '100px'}}>
+                <Grid.Column width={16}>
+                <SideMenuSection active='home'/>
+                </Grid.Column>
+              </Grid.Row>
+							<Grid.Row>
+				        <Grid.Column width={4} only='large screen'>
+                  <Sticky context={contextRef} offset={75}>
+                    <SideMenuSection active='home'/>
+                  </Sticky>
 				        </Grid.Column>
-				        <Grid.Column stretched width={12}>
+				        <Grid.Column stretched tablet={16} mobile={16} largeScreen={12} widescreen={12}>
 									<Segment>
 						          <Header as='h3'>Welcome</Header>
                       <Segment basic textAlign='center'>
@@ -46,7 +52,7 @@ class App extends Component {
                       </Segment>
                       <p>Computer Systems Engineer - Corhuila University, 2012. <Flag name='colombia'/></p>
                       <p>Specialist in Telecommunications Project Management - Politecnico Grancolombiano University, 2013. <Flag name='colombia'/></p>
-						          <p>Master's Candidate in Computer Engineering - Pontifical Catholic University of Chile, 2017. <Flag name='chile'/></p>
+						          <p>Master{"'"}s Candidate in Computer Engineering - Pontifical Catholic University of Chile, 2017. <Flag name='chile'/></p>
                       <p>My research areas are Software Engineering, Recommender Systems and Process Mining. Since 2016 I have been working
                       in the field of Empirical Software Engineering aiming for better teaching and learning experiences of the Software Development
                       Process in educational environments.</p>
@@ -57,13 +63,16 @@ class App extends Component {
 
                       <p> My main experiences are in the field of software development, I have worked in some companies developing software products
                       in different platforms.</p>
-
-
 					        </Segment>
-				        </Grid.Column>
+				         </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                  <Grid.Column>
+                    <FooterSection/>
+                  </Grid.Column>
+                </Grid.Row>
 				      </Grid>
 						</Segment>
-						<FooterSection/>
 					</div>
         )
     }

@@ -5,7 +5,7 @@ import './App.css';
 
 export default class SideMenuSection extends React.Component {
 
-  state = { activeItem: 'home' }
+  state = { activeItem: 'home'}
 
   componentDidMount(){
       this.setState({
@@ -15,10 +15,10 @@ export default class SideMenuSection extends React.Component {
 
   render () {
 
-   const { activeItem } = this.state;
+   const { activeItem, fluid } = this.state;
 
    return (
-     <Menu pointing vertical compact={true} className='full-height'>
+     <Menu pointing vertical fluid compact>
        <Link to="/">
          <Menu.Item name='home' active={activeItem === 'home'}>
            <Header as='h4'>Home</Header>

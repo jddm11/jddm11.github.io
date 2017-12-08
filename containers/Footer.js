@@ -5,10 +5,10 @@ import './App.css';
 export default class FooterSection extends React.Component {
  render () {
    return (
-     <Segment secondary color='grey' className='footer-height overlay-footer' textAlign='center'>
+     <Segment secondary className='footer-height overlay-footer' textAlign='center'>
      <Container>
-       <a href="http://linkedin.com/in/jddm11/" target='_blank'>
-         <Icon name='linkedin' /> LinkedIn
+       <a href="http://facebook.com/jddm11/" target='_blank'>
+         <Icon name='facebook' /> Facebook
        </a>
      </Container>
      <Divider />
