@@ -40,7 +40,7 @@ handleContextRef = contextRef => this.setState({ contextRef })
              <Segment>
                <Container fluid>
                  <Header as='h2'>Academia</Header>
-                <Card.Group>
+                <Card.Group itemsPerRow={3} stackable>
                   <Card>
                     <Card.Content header='Enriching Capstone Project-based Learning Experiences Using a Crowdsourcing Recommender Engine' />
                     <Card.Description>

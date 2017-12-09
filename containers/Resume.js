@@ -35,9 +35,9 @@ export default class Resume extends React.Component {
                  <Header as='h2'>Resume</Header>
                  <Grid>
                  <Grid.Row>
-                 <Grid.Column width={9}>
+                 <Grid.Column width={8}>
                  <Segment>
-                <Statistic horizontal color='olive'>
+                <Statistic color='olive'>
                   <Statistic.Value>8</Statistic.Value>
                   <Statistic.Label>programming languages</Statistic.Label>
                 </Statistic>
@@ -108,7 +108,7 @@ export default class Resume extends React.Component {
                 </List>
                 </Segment>
                 </Grid.Column>
-                <Grid.Column width={7}>
+                <Grid.Column width={8}>
                 <Segment>
                 <Statistic horizontal color='blue'>
                   <Statistic.Value>3</Statistic.Value>
@@ -219,7 +219,8 @@ export default class Resume extends React.Component {
                     </List.Item>
                 </List>
                 </Segment>
-                <Segment inverted>
+                <Container fluid textAlign='center'>
+                <Segment inverted textAlign='center'>
                 <Statistic.Group widths='three'>
                      <Statistic size='small' color='teal' inverted>
                        <Statistic.Value><Icon name='plane' />3</Statistic.Value>
@@ -235,7 +236,7 @@ export default class Resume extends React.Component {
                      </Statistic>
                    </Statistic.Group>
                 </Segment>
-
+                </Container>
 
                </Container>
                </Segment>

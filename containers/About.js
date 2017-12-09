@@ -41,10 +41,10 @@ export default class About extends React.Component {
                     then unite my skills in a strategic way to create quality solutions.  I move in the world of Software Engineering, an area that I am passionate about because it offers the possibility of working transversally in various action fields.
                   </p>
                 </Message>
-                <Grid>
-                <Grid.Row>
-                <Grid.Column>
                 <Segment>
+                <Grid>
+                <Grid.Row columns={2}>
+                <Grid.Column>
                 <ImageZoom
                     image={{
                       src: 'https://scontent.fscl6-1.fna.fbcdn.net/v/t1.0-9/18664369_10155467376799575_2610609975545497547_n.jpg?oh=97f67475a6e86f61c5e7374b8c966365&oe=5A8D47FB',
@@ -56,27 +56,12 @@ export default class About extends React.Component {
                    <Message.Header>Buenos Aires, Argentina</Message.Header>
                    <p>Japanese Garden</p>
                  </Message>
-                 <ImageZoom
-                     image={{
-                       src: 'https://scontent.fscl6-1.fna.fbcdn.net/v/l/t1.0-9/10407225_10203405617172568_6586942131772647809_n.jpg?oh=5d45f75928e017e891a79245a93ea579&oe=5A8B957F',
-                       alt: 'Buenos Aires',
-                       className: 'img image small ui inline spaced'
-                     }}
-                   />
-                 <Message info compact>
-                   <Message.Header>My family</Message.Header>
-                   <p>Daniel, Miriam and Karen</p>
-                 </Message>
-                 </Segment>
-                 </Grid.Column>
-                 </Grid.Row>
-                 <Grid.Row>
-                 <Grid.Column>
-                 <Segment>
+                </Grid.Column>
+                <Grid.Column>
                  <ImageZoom
                      image={{
                        src: 'https://scontent.fscl6-1.fna.fbcdn.net/v/t1.0-9/17265269_10155221160594575_4410814920617352216_n.jpg?oh=99031ac550792d61eb7838886a68be5c&oe=5AD4256E',
-                       alt: 'Buenos Aires',
+                       alt: 'Seattle, USA',
                        className: 'img image small ui inline spaced'
                      }}
                    />
@@ -84,10 +69,27 @@ export default class About extends React.Component {
                    <Message.Header>Seattle, USA</Message.Header>
                    <p>Amazon GO</p>
                  </Message>
+                 </Grid.Column>
+                 </Grid.Row>
+                 <Grid.Row columns={2}>
+                 <Grid.Column>
+                 <ImageZoom
+                     image={{
+                       src: 'https://scontent.fscl6-1.fna.fbcdn.net/v/l/t1.0-9/10407225_10203405617172568_6586942131772647809_n.jpg?oh=5d45f75928e017e891a79245a93ea579&oe=5A8B957F',
+                       alt: 'Family',
+                       className: 'img image small ui inline spaced'
+                     }}
+                   />
+                 <Message info compact>
+                   <Message.Header>My family</Message.Header>
+                   <p>Daniel, Miriam and Karen</p>
+                 </Message>
+                </Grid.Column>
+                <Grid.Column>
                  <ImageZoom
                      image={{
                        src: 'https://scontent.fscl6-1.fna.fbcdn.net/v/t1.0-9/10690019_10152908139529575_3525928045605987671_n.jpg?oh=cc7102ce3f45f67c448fe7be95562b60&oe=5ACA4FFD',
-                       alt: 'Buenos Aires',
+                       alt: 'Sydney, Australia',
                        className: 'img image small ui inline spaced'
                      }}
                    />
@@ -95,10 +97,10 @@ export default class About extends React.Component {
                    <Message.Header>Sydney, Australia</Message.Header>
                    <p>Embassy School</p>
                  </Message>
-                 </Segment>
                  </Grid.Column>
                  </Grid.Row>
                  </Grid>
+                 </Segment>
                </Container>
                </Segment>
               </Grid.Column>
