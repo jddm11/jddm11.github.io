@@ -15,9 +15,10 @@ export default class Resume extends React.Component {
    return (
      <div className='full-height'>
        <HeaderSection />
-       <Segment basic className='main' ref={this.handleContextRef}>
+       <Segment basic className='main'>
+       <div ref={this.handleContextRef}>
        <Grid>
-         <Grid.Row only='tablet mobile' style={{ marginTop: '100px'}}>
+         <Grid.Row only='tablet mobile'>
            <Grid.Column width={16}>
            <SideMenuSection active='resume'/>
            </Grid.Column>
@@ -171,7 +172,7 @@ export default class Resume extends React.Component {
                 </Grid>
                 <Segment>
                 <Label>
-                  <Icon name='linkify' /> INSTERESTING LINKS
+                  <Icon name='linkify' /> INTERESTING LINKS
                 </Label>
                 <List>
                     <List.Item>
@@ -226,7 +227,7 @@ export default class Resume extends React.Component {
                      </Statistic>
                      <Statistic size='small' color='red' inverted>
                        <Statistic.Value><Icon name='graduation' />2</Statistic.Value>
-                       <Statistic.Label>Scholarships obtained <br />(Bachelor and Magister)</Statistic.Label>
+                       <Statistic.Label>Scholarships obtained <br />(Bachelor and Master degree)</Statistic.Label>
                      </Statistic>
                      <Statistic size='small' color='yellow' inverted>
                        <Statistic.Value><Icon name='favorite' />3</Statistic.Value>
@@ -246,6 +247,7 @@ export default class Resume extends React.Component {
                </Grid.Column>
              </Grid.Row>
            </Grid>
+          </div>
          </Segment>
        </div>
    )

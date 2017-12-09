@@ -15,6 +15,11 @@
   border-bottom: 2px solid #b5cc18!important;
 }
 
+.fixed-container-width{
+  margin-left:0px !important;
+  margin-right:0px !important;
+}
+
 .menu-header-over{
   z-index: 9999 !important;
 }

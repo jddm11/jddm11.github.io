@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import { Container, Header, Grid, Segment , Flag, Image, Menu, Dropdown, Divider, Icon, Rail, Sticky} from 'semantic-ui-react'
+import { Container, Header, Grid, Segment , Flag, Image, Menu, Dropdown, Divider, Icon, Rail, Sticky, Card, List, Message} from 'semantic-ui-react'
 import HeaderSection from './Header';
 import FooterSection from './Footer';
 import SideMenuSection from './SideMenu';
@@ -26,9 +26,10 @@ class App extends Component {
         return (
 					<div className='full-height'>
 	          <HeaderSection />
-						<Segment basic className='main' ref={this.handleContextRef}>
+						<Segment basic className='main'>
+            <div ref={this.handleContextRef}>
             <Grid>
-              <Grid.Row only='tablet mobile' style={{ marginTop: '100px'}}>
+              <Grid.Row only='tablet mobile'>
                 <Grid.Column width={16}>
                 <SideMenuSection active='home'/>
                 </Grid.Column>
@@ -48,21 +49,42 @@ class App extends Component {
                         onMouseEnter={this.handleShow}
                         onMouseLeave={this.handleHide}
                         dimmer={{ active, content }}
-                        size='large' circular src='../images/myPhoto.jpg' />
+                         circular size='medium' spaced src='../images/myPhoto.jpg' />
                       </Segment>
-                      <p>Computer Systems Engineer - Corhuila University, 2012. <Flag name='colombia'/></p>
-                      <p>Specialist in Telecommunications Project Management - Politecnico Grancolombiano University, 2013. <Flag name='colombia'/></p>
-						          <p>Master{"'"}s Candidate in Computer Engineering - Pontifical Catholic University of Chile, 2017. <Flag name='chile'/></p>
-                      <p>My research areas are Software Engineering, Recommender Systems and Process Mining. Since 2016 I have been working
-                      in the field of Empirical Software Engineering aiming for better teaching and learning experiences of the Software Development
-                      Process in educational environments.</p>
+                      <List celled>
+                      <List.Item>
+                          <List.Content>
+                          <List.Header>Bachelor{"'"}s degree</List.Header>
+                          <p><Flag name='colombia'/> Computer Systems Engineer - Corhuila University, 2012.</p>
+                        </List.Content>
+                      </List.Item>
+                      <List.Item>
+                        <List.Content>
+                          <List.Header>Postgraduate studies</List.Header>
+                          <p><Flag name='colombia'/> Specialist in Telecommunications Project Management - Politecnico Grancolombiano University, 2013</p>
+                          <p><Flag name='chile'/> Master{"'"}s Candidate in Computer Engineering - Pontifical Catholic University of Chile, 2017</p>
+                        </List.Content>
+                      </List.Item>
+                      </List>
 
-                      <p>My master research is focused on the integration of different approaches (Recommender Systems, Process Mining, etc) to
-                      offer an Integrated Educational Plataform in Software Engineering which support students in the learning process and academic
-                      teams in the teaching strategies.</p>
-
-                      <p> My main experiences are in the field of software development, I have worked in some companies developing software products
-                      in different platforms.</p>
+                      <Message floating
+                        icon='settings'
+                        size='small'
+                        header='Research'
+                        content='My research areas are Software Engineering, Recommender Systems and Process Mining. Since 2016 I have been working in the field of Empirical Software Engineering aiming for better teaching and learning experiences of the Software Development Process in educational environments.'
+                      />
+                      <Message floating
+                        icon='crosshairs'
+                        header='Focus'
+                        size='small'
+                        content='My master research is focused on the integration of different approaches (Recommender Systems, Process Mining, etc) to offer an Integrated Educational Plataform in Software Engineering which support students in the learning process and academic teams in the teaching strategies.'
+                      />
+                      <Message floating
+                        icon='cubes'
+                        header='Experience'
+                        size='small'
+                        content='My main experiences are in the field of software development, I have worked in some companies developing software products in different platforms.'
+                      />
 					        </Segment>
 				         </Grid.Column>
                 </Grid.Row>
@@ -72,6 +94,7 @@ class App extends Component {
                   </Grid.Column>
                 </Grid.Row>
 				      </Grid>
+              </div>
 						</Segment>
 					</div>
         )

@@ -14,7 +14,6 @@ export default class SideMenuSection extends React.Component {
   }
 
   render () {
-
    const { activeItem, fluid } = this.state;
 
    return (

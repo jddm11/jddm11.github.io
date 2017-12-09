@@ -1,5 +1,6 @@
 import React from 'react';
 import { Segment, Grid, Container, Header, Message, Sticky, Image} from 'semantic-ui-react'
+import ImageZoom from 'react-medium-image-zoom'
 import {Link} from 'react-router-dom';
 import HeaderSection from './Header';
 import FooterSection from './Footer';
@@ -14,9 +15,11 @@ export default class About extends React.Component {
    return (
      <div className='full-height'>
        <HeaderSection />
-       <Segment basic className='main' ref={this.handleContextRef}>
+       <Segment basic className='main'>
+       <div ref={this.handleContextRef}>
        <Grid>
-         <Grid.Row only='tablet mobile' style={{ marginTop: '100px'}}>
+         {/* style={{ marginTop: '100px'}} */}
+         <Grid.Row only='tablet mobile'>
            <Grid.Column width={16}>
            <SideMenuSection active='about_me'/>
            </Grid.Column>
@@ -38,28 +41,64 @@ export default class About extends React.Component {
                     then unite my skills in a strategic way to create quality solutions.  I move in the world of Software Engineering, an area that I am passionate about because it offers the possibility of working transversally in various action fields.
                   </p>
                 </Message>
-
-                 <Image inline spaced size='small' src='https://scontent.fscl6-1.fna.fbcdn.net/v/t1.0-9/18664369_10155467376799575_2610609975545497547_n.jpg?oh=97f67475a6e86f61c5e7374b8c966365&oe=5A8D47FB' />
+                <Grid>
+                <Grid.Row>
+                <Grid.Column>
+                <Segment>
+                <ImageZoom
+                    image={{
+                      src: 'https://scontent.fscl6-1.fna.fbcdn.net/v/t1.0-9/18664369_10155467376799575_2610609975545497547_n.jpg?oh=97f67475a6e86f61c5e7374b8c966365&oe=5A8D47FB',
+                      alt: 'Buenos Aires',
+                      className: 'img image small ui inline spaced'
+                    }}
+                  />
                  <Message info compact>
                    <Message.Header>Buenos Aires, Argentina</Message.Header>
                    <p>Japanese Garden</p>
                  </Message>
-                 <Image inline spaced size='small' src='https://scontent.fscl6-1.fna.fbcdn.net/v/l/t1.0-9/10407225_10203405617172568_6586942131772647809_n.jpg?oh=5d45f75928e017e891a79245a93ea579&oe=5A8B957F' />
+                 <ImageZoom
+                     image={{
+                       src: 'https://scontent.fscl6-1.fna.fbcdn.net/v/l/t1.0-9/10407225_10203405617172568_6586942131772647809_n.jpg?oh=5d45f75928e017e891a79245a93ea579&oe=5A8B957F',
+                       alt: 'Buenos Aires',
+                       className: 'img image small ui inline spaced'
+                     }}
+                   />
                  <Message info compact>
                    <Message.Header>My family</Message.Header>
                    <p>Daniel, Miriam and Karen</p>
                  </Message>
-                 <br />
-                 <Image inline spaced size='small' src='https://scontent.fscl6-1.fna.fbcdn.net/v/t1.0-9/17265269_10155221160594575_4410814920617352216_n.jpg?oh=99031ac550792d61eb7838886a68be5c&oe=5AD4256E' />
+                 </Segment>
+                 </Grid.Column>
+                 </Grid.Row>
+                 <Grid.Row>
+                 <Grid.Column>
+                 <Segment>
+                 <ImageZoom
+                     image={{
+                       src: 'https://scontent.fscl6-1.fna.fbcdn.net/v/t1.0-9/17265269_10155221160594575_4410814920617352216_n.jpg?oh=99031ac550792d61eb7838886a68be5c&oe=5AD4256E',
+                       alt: 'Buenos Aires',
+                       className: 'img image small ui inline spaced'
+                     }}
+                   />
                  <Message info compact>
                    <Message.Header>Seattle, USA</Message.Header>
                    <p>Amazon GO</p>
                  </Message>
-                 <Image inline spaced size='small' src='https://scontent.fscl6-1.fna.fbcdn.net/v/t1.0-9/10690019_10152908139529575_3525928045605987671_n.jpg?oh=cc7102ce3f45f67c448fe7be95562b60&oe=5ACA4FFD' />
+                 <ImageZoom
+                     image={{
+                       src: 'https://scontent.fscl6-1.fna.fbcdn.net/v/t1.0-9/10690019_10152908139529575_3525928045605987671_n.jpg?oh=cc7102ce3f45f67c448fe7be95562b60&oe=5ACA4FFD',
+                       alt: 'Buenos Aires',
+                       className: 'img image small ui inline spaced'
+                     }}
+                   />
                  <Message info compact>
                    <Message.Header>Sydney, Australia</Message.Header>
                    <p>Embassy School</p>
                  </Message>
+                 </Segment>
+                 </Grid.Column>
+                 </Grid.Row>
+                 </Grid>
                </Container>
                </Segment>
               </Grid.Column>
@@ -70,6 +109,7 @@ export default class About extends React.Component {
                </Grid.Column>
              </Grid.Row>
            </Grid>
+           </div>
          </Segment>
        </div>
    )

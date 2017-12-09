@@ -15,9 +15,10 @@ export default class Industry extends React.Component {
    return (
      <div className='full-height'>
        <HeaderSection />
-       <Segment basic className='main' ref={this.handleContextRef}>
+       <Segment basic className='main'>
+       <div ref={this.handleContextRef}>
        <Grid>
-         <Grid.Row only='tablet mobile' style={{ marginTop: '100px'}}>
+         <Grid.Row only='tablet mobile'>
            <Grid.Column width={16}>
            <SideMenuSection active='industry'/>
            </Grid.Column>
@@ -106,6 +107,7 @@ export default class Industry extends React.Component {
                </Grid.Column>
              </Grid.Row>
            </Grid>
+           </div>
          </Segment>
        </div>
    )
