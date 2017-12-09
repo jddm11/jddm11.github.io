@@ -33,11 +33,11 @@ export default class Resume extends React.Component {
              <Segment>
                <Container fluid>
                  <Header as='h2'>Resume</Header>
-                 <Grid>
+                 <Grid stackable>
                  <Grid.Row>
                  <Grid.Column width={8}>
                  <Segment>
-                <Statistic color='olive'>
+                <Statistic horizontal color='olive'>
                   <Statistic.Value>8</Statistic.Value>
                   <Statistic.Label>programming languages</Statistic.Label>
                 </Statistic>
@@ -232,7 +232,7 @@ export default class Resume extends React.Component {
                      </Statistic>
                      <Statistic size='small' color='yellow' inverted>
                        <Statistic.Value><Icon name='favorite' />3</Statistic.Value>
-                       <Statistic.Label>My hobbies <br />(Music, Anime and Movies)</Statistic.Label>
+                       <Statistic.Label>My hobbies <br />(Music, Japanese Animation and Movies)</Statistic.Label>
                      </Statistic>
                    </Statistic.Group>
                 </Segment>

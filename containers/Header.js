@@ -22,7 +22,7 @@ export default class HeaderSection extends React.Component {
           Juan Diego Díaz Mosquera
         </Menu.Item>
         <Menu.Menu position='right'>
-        <Dropdown item icon='content' simple>
+        <Dropdown item icon='content'>
       <Dropdown.Menu>
         <Dropdown.Item>
         <a href="http://linkedin.com/in/jddm11/" target='_blank'>
