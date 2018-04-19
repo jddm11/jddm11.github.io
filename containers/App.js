@@ -62,7 +62,7 @@ class App extends Component {
                         <List.Content>
                           <List.Header>Postgraduate studies</List.Header>
                           <p><Flag name='colombia'/> Specialist in Telecommunications Project Management - Politecnico Grancolombiano University, 2013</p>
-                          <p><Flag name='chile'/> Master{"'"}s Candidate in Computer Engineering - Pontifical Catholic University of Chile, 2017</p>
+                          <p><Flag name='chile'/> Master in Computer Engineering - Pontifical Catholic University of Chile, 2017</p>
                         </List.Content>
                       </List.Item>
                       </List>
