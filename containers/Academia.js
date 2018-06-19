@@ -69,7 +69,7 @@ handleContextRef = contextRef => this.setState({ contextRef })
                    </Card.Content>
                  </Card>
                  <Card>
-                  <Card.Content header='Enhancing Project Management Skills in Software Engineering Capstone Courses' />
+                  <Card.Content header='A Cloud-based Mobile System to Improve Project Management Skills in Software Engineering Capstone Courses' />
                   <Card.Description>
                   <Label circular>Juan Diego Díaz</Label>
                   <Label circular>Andres Neyem</Label>
@@ -77,7 +77,8 @@ handleContextRef = contextRef => this.setState({ contextRef })
                   </Card.Description>
                   <Card.Content extra>
                     <Icon name='info circle' />
-                    Mobile Information System, HINDAWI 2017 - <Label color='blue'>On review</Label>
+                    Mobile Information System, HINDAWI 2017
+                    //- <Label color='blue'>On review</Label>
                   </Card.Content>
                 </Card>
                </Card.Group>
