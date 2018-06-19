@@ -12,7 +12,7 @@ export default class FooterSection extends React.Component {
        </a>
      </Container>
      <Divider />
-       Copyright © 2017 Juan Diego Díaz Mosquera - All rights reserved
+       Copyright © 2018 Juan Diego Díaz Mosquera - All rights reserved
      </Segment>
    )
  }
